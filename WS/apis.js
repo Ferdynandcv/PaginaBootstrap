@@ -1,14 +1,8 @@
-
-
-
-
-
 function traer() {
     var contenido = document.getElementById('contenido')
     fetch('https://randomuser.me/api/')
         .then(res => res.json())
         .then(data => {
-            //   console.log(data.results['0'])
             contenido.innerHTML = `
         <div>
         <img src="   ${data.results['0'].picture.large}"> 
